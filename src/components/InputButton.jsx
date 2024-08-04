@@ -1,36 +1,16 @@
-// InputButton.js
-import React, { useState } from 'react';
-import './InputButton.css';
+import PropTypes from 'prop-types';
+import React from 'react';
 
-const InputButton = ({ inputPlaceholder, buttonText }) => {
-  const [inputValue, setInputValue] = useState('');
-
-  const handleInputChange = (event) => {
-    setInputValue(event.target.value);
-  };
-
-  const handleClick = () => {
-    alert(`Button clicked with input: ${inputValue}`);
-  };
-
-  return (
-    <div className="input-button-container">
-      <input
-        type="text"
-        value={inputValue}
-        onChange={handleInputChange}
-        placeholder={inputPlaceholder}
-        className="input-field"
-      />
-      <button onClick={handleClick} className="button">
-        {buttonText} <i className="fa fa-search" />
-      </button>
-    </div>
-  );
-};
+const InputButton = ({ inputPlaceholder, buttonText }) => (
+  <div>
+    <input type="text" placeholder={inputPlaceholder} />
+    <button type="button">{buttonText}</button>
+  </div>
+);
 
 InputButton.propTypes = {
   inputPlaceholder: PropTypes.string.isRequired,
   buttonText: PropTypes.string.isRequired,
 };
+
 export default InputButton;
