@@ -1,7 +1,7 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
 
-import { Container, Col, Row } from '@openedx/paragon';
+import { Col, Container, Row } from '@openedx/paragon';
 
 import WidgetSidebar from '../WidgetContainers/WidgetSidebar';
 
@@ -43,6 +43,7 @@ export const DashboardLayout = ({ children }) => {
         <Col {...columnConfig.sidebar} className="sidebar-column">
           {!isCollapsed && (<h2 className="course-list-title">&nbsp;</h2>)}
           <WidgetSidebar />
+          hello
         </Col>
       </Row>
     </Container>
