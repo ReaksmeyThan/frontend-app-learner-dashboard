@@ -15,15 +15,15 @@ const InputButton = ({ inputPlaceholder, buttonText }) => {
 
   return (
     <div className="input-button-container">
-      <input 
-        type="text" 
-        value={inputValue} 
-        onChange={handleInputChange} 
-        placeholder={inputPlaceholder} 
+      <input
+        type="text"
+        value={inputValue}
+        onChange={handleInputChange}
+        placeholder={inputPlaceholder}
         className="input-field"
       />
       <button onClick={handleClick} className="button">
-        {buttonText} <i className="fa fa-search"></i>
+        {buttonText} <i className="fa fa-search" />
       </button>
     </div>
   );
