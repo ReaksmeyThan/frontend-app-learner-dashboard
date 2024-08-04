@@ -1,15 +1,15 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
 
 import { Card } from '@openedx/paragon';
 
-import { useIsCollapsed } from './hooks';
+import CourseCardActions from './components/CourseCardActions';
 import CourseCardBanners from './components/CourseCardBanners';
+import CourseCardDetails from './components/CourseCardDetails';
 import CourseCardImage from './components/CourseCardImage';
 import CourseCardMenu from './components/CourseCardMenu';
-import CourseCardActions from './components/CourseCardActions';
-import CourseCardDetails from './components/CourseCardDetails';
 import CourseCardTitle from './components/CourseCardTitle';
+import { useIsCollapsed } from './hooks';
 
 import './CourseCard.scss';
 

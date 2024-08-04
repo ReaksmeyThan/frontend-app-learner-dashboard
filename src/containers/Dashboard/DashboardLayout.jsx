@@ -1,17 +1,16 @@
-import PropTypes from "prop-types";
-import React from "react";
-
 import {
+  Button,
   Col,
   Container,
   Form,
-  Row
+  FormControl,
+  Row,
 } from "@openedx/paragon";
+import PropTypes from "prop-types";
+import React from "react";
 
-import InputButton from "components/InputButton";
 import WidgetSidebar from "../WidgetContainers/WidgetSidebar";
 import hooks from "./hooks";
-
 export const columnConfig = {
   courseList: {
     withSidebar: {
@@ -50,22 +49,30 @@ export const DashboardLayout = ({ children }) => {
 
           <p>Build up your skills. Explore courses here</p>
           <Form className="search-form d-flex mt-3">
-
-            <InputButton className="search-button"
-              inputPlaceholder="What do you want to learn?"
-              buttonText="SEARCH"
+            <FormControl
+              type="text"
+              placeholder="What do you want to learn?"
+              className="search-input"
             />
+            <Button className="search-button" type="button">
+              Search
+              <i className="fa fa-search"></i>
+            </Button>
+
           </Form>
+      
         </Col>
       </Row>
 
       {/* Main Content Section */}
       <Row>
+      
         <Col {...courseListColumnProps} className="course-list-column">
           {children}
         </Col>
         <Col {...columnConfig.sidebar} className="sidebar-column">
-          {!isCollapsed && <h2 className="course-list-title">&nbsp;</h2>}
+          {!isCollapsed
+         }
           <WidgetSidebar />
         </Col>
       </Row>
