@@ -1,11 +1,16 @@
-import PropTypes from 'prop-types';
-import React from 'react';
+import PropTypes from "prop-types";
+import React from "react";
 
-import { Col, Container, Row } from '@openedx/paragon';
+import {
+  Col,
+  Container,
+  Form,
+  Row
+} from "@openedx/paragon";
 
-import WidgetSidebar from '../WidgetContainers/WidgetSidebar';
-
-import hooks from './hooks';
+import InputButton from "components/InputButton";
+import WidgetSidebar from "../WidgetContainers/WidgetSidebar";
+import hooks from "./hooks";
 
 export const columnConfig = {
   courseList: {
@@ -25,30 +30,49 @@ export const columnConfig = {
 };
 
 export const DashboardLayout = ({ children }) => {
-  const {
-    isCollapsed,
-    sidebarShowing,
-  } = hooks.useDashboardLayoutData();
+  const { isCollapsed, sidebarShowing } = hooks.useDashboardLayoutData();
 
   const courseListColumnProps = sidebarShowing
     ? columnConfig.courseList.withSidebar
     : columnConfig.courseList.noSidebar;
 
   return (
-    <Container fluid size="xl">
+    <Container fluid>
+      {/* Header Section */}
+      <Row
+        className="header"
+        xs={2}
+        style={{ backgroundImage: "url(/Banner1.jpg)" }}
+      >
+        <Col className="header-content" md={{ span: 5, offset: 1 }}>
+          <h1 className="title1">Welcome to CBC Academy </h1>
+          <h1 className="title2">Online Courses</h1>
+
+          <p>Build up your skills. Explore courses here</p>
+          <Form className="search-form d-flex mt-3">
+
+            <InputButton className="search-button"
+              inputPlaceholder="What do you want to learn?"
+              buttonText="SEARCH"
+            />
+          </Form>
+        </Col>
+      </Row>
+
+      {/* Main Content Section */}
       <Row>
         <Col {...courseListColumnProps} className="course-list-column">
           {children}
         </Col>
         <Col {...columnConfig.sidebar} className="sidebar-column">
-          {!isCollapsed && (<h2 className="course-list-title">&nbsp;</h2>)}
+          {!isCollapsed && <h2 className="course-list-title">&nbsp;</h2>}
           <WidgetSidebar />
-          hello
         </Col>
       </Row>
     </Container>
   );
 };
+
 DashboardLayout.propTypes = {
   children: PropTypes.node.isRequired,
 };
