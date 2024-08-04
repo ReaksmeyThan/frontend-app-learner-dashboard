@@ -29,4 +29,8 @@ const InputButton = ({ inputPlaceholder, buttonText }) => {
   );
 };
 
+InputButton.propTypes = {
+  inputPlaceholder: PropTypes.string.isRequired,
+  buttonText: PropTypes.string.isRequired,
+};
 export default InputButton;
