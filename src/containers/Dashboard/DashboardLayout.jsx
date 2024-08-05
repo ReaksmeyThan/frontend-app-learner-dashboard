@@ -5,12 +5,12 @@ import {
   Form,
   FormControl,
   Row,
-} from '@openedx/paragon';
-import PropTypes from 'prop-types';
-import React from 'react';
+} from "@openedx/paragon";
+import PropTypes from "prop-types";
+import React from "react";
 
-import WidgetSidebar from '../WidgetContainers/WidgetSidebar';
-import hooks from './hooks';
+import WidgetSidebar from "../WidgetContainers/WidgetSidebar";
+import hooks from "./hooks";
 
 export const columnConfig = {
   courseList: {
@@ -25,7 +25,7 @@ export const columnConfig = {
   },
   sidebar: {
     lg: { span: 12, offset: 0 },
-    xl: { span: 4, offset: 0},
+    xl: { span: 4, offset: 0 },
   },
 };
 
@@ -39,10 +39,7 @@ export const DashboardLayout = ({ children }) => {
   return (
     <Container fluid>
       {/* Header Section */}
-      <Row
-        className="banner"
-        style={{ backgroundImage: 'url(/Banner1.jpg)' }}
-      >
+      <Row className="banner" style={{ backgroundImage: "url(/Banner1.jpg)" }}>
         <Col className="banner-content" md={{ span: 5, offset: 1 }}>
           <h1 className="title1">Welcome to CBC Academy </h1>
           <h1 className="title2">Online Courses</h1>
@@ -58,16 +55,13 @@ export const DashboardLayout = ({ children }) => {
               SEARCH
               <i className="fa fa-search" />
             </Button>
-
           </Form>
-
         </Col>
       </Row>
 
       {/* Main Content Section */}
       <Row className="justify-content-md-center">
-
-        <Col  {...courseListColumnProps} className="course-list-column"  >
+        <Col {...courseListColumnProps} className="course-list-column">
           {children}
         </Col>
         <Col {...columnConfig.sidebar} className="sidebar-column">
