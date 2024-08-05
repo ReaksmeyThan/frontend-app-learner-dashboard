@@ -8,8 +8,8 @@ import hooks from "./hooks";
 export const columnConfig = {
   courseList: {
     withSidebar: {
-      lg: { span: 12, offset: 0 },
-      xl: { span: 10, offset: 0 },
+      lg: { span: 12, offset:1 },
+      xl: { span: 8, offset: 0},
     },
     noSidebar: {
       lg: { span: 12, offset: 0 },
@@ -18,7 +18,7 @@ export const columnConfig = {
   },
   sidebar: {
     lg: { span: 12, offset: 0 },
-    xl: { span: 4, offset: 0 },
+    xl: { span: 4, offset: 1 },
   },
 };
 
@@ -33,7 +33,7 @@ export const DashboardLayout = ({ children }) => {
     <Container fluid>
       {/* Header Section */}
       <Row className="banner" style={{ backgroundImage: "url(/Banner1.jpg)" }}>
-        <Col className="banner-content" md={{ span: 5, offset: 1 }}>
+        <Col className="banner-content" md={{ span: 5, offset: 2 }}>
           <h1 className="title1">Welcome to CBC Academy </h1>
           <h1 className="title2">Online Courses</h1>
 
