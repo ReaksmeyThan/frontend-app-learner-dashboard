@@ -1,6 +1,10 @@
+
 import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 
+
+import { faFacebookF, faInstagram, faLinkedin, faYoutube } from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Footer = () => {
   return (
@@ -43,24 +47,26 @@ const Footer = () => {
               <img src="/logo-white.png" alt="Logo" style={{ maxWidth: '200px' }} />
               
               <ul className="list-unstyled list-inline social-icons mt-3" style={{ maxWidth: '300px' }}>
-                <li className="list-inline-item">
-                  <a href="#"><i className="fab fa-facebook-f"></i></a>
-                </li>
-                <li className="list-inline-item">
-                  <a href="#"><i className="fab fa-youtube"></i></a>
-                </li>
-                <li className="list-inline-item">
-                  <a href="#"><i className="fab fa-linkedin"></i></a>
-                </li>
-                <li className="list-inline-item">
-                  <a href="#"><i className="fab fa-instagram"></i></a>
-                </li>
-              </ul>
+              <li className="list-inline-item">
+                <a href="#"><FontAwesomeIcon icon={faFacebookF} /></a>
+              </li>
+              <li className="list-inline-item">
+                <a href="#"><FontAwesomeIcon icon={faYoutube} /></a>
+              </li>
+              <li className="list-inline-item">
+                <a href="#"><FontAwesomeIcon icon={faLinkedin} /></a>
+              </li>
+              <li className="list-inline-item">
+                <a href="#"><FontAwesomeIcon icon={faInstagram} /></a>
+              </li>
+            </ul>
+              
               <p className="mt-3">&copy; 2024 CBC. All rights reserved.</p>
               <div>
                 {/* Language Selector */}
                 {/* Add your language selector component or logic here */}
               </div>
+              
             </Col>
 
             {/* Browse Courses */}

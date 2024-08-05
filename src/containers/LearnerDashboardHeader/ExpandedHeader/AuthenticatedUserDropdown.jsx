@@ -3,7 +3,7 @@ import React from 'react';
 import { getConfig } from '@edx/frontend-platform';
 import { useIntl } from '@edx/frontend-platform/i18n';
 import { AppContext } from '@edx/frontend-platform/react';
-import { AvatarButton, Dropdown, Badge } from '@openedx/paragon';
+import { AvatarButton, Badge, Dropdown } from '@openedx/paragon';
 
 import { reduxHooks } from 'hooks';
 
@@ -21,8 +21,8 @@ export const AuthenticatedUserDropdown = () => {
           as={AvatarButton}
           src={authenticatedUser.profileImage}
           id="user"
-          variant="light"
-          className="p-4"
+          variant="info"
+          className="profile p-4"
         >
           <span data-hj-suppress className="d-md-inline">
             {authenticatedUser.username}
