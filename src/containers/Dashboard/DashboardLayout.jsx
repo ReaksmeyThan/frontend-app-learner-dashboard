@@ -1,11 +1,4 @@
-import {
-  Button,
-  Col,
-  Container,
-  Form,
-  FormControl,
-  Row,
-} from "@openedx/paragon";
+import { Button, Col, Container, Form, FormControl, Row } from "@openedx/paragon";
 import PropTypes from "prop-types";
 import React from "react";
 
