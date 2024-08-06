@@ -39,25 +39,25 @@ export const DashboardLayout = ({ children }) => {
   return (
     <Container>
       {/* Header Section */}
-      <Row className='banner' style={{ backgroundImage: 'url(/Banner1.jpg)' }}>
+      <Row className="banner" style={{ backgroundImage: 'url(/Banner1.jpg)' }}>
         <Col
-          className='banner-content d-flex justify-content-center align-items-center'
+          className="banner-content d-flex justify-content-center align-items-center"
           md={6}
         >
-          <div className='contain-title align-items-left'>
-            <h1 className='title1'>Welcome to CBC Academy </h1>
-            <h1 className='title2'>Online Courses</h1>
+          <div className="contain-title align-items-left">
+            <h1 className="title1">Welcome to CBC Academy </h1>
+            <h1 className="title2">Online Courses</h1>
 
             <p>Build up your skills. Explore courses here</p>
-            <Form className='search-form d-flex mt-3'>
+            <Form className="search-form d-flex mt-3">
               <FormControl
-                type='text'
-                placeholder='What do you want to learn?'
-                className='search-input'
+                type="text"
+                placeholder="What do you want to learn?"
+                className="search-input"
               />
-              <Button className='search-button' type='button'>
+              <Button className="search-button" type="button">
                 SEARCH
-                <i className='fa fa-search' />
+                <i className="fa fa-search" />
               </Button>
             </Form>
           </div>
@@ -65,11 +65,11 @@ export const DashboardLayout = ({ children }) => {
       </Row>
 
       {/* Main Content Section */}
-      <Row className='justify-content-md-center'>
-        <Col {...courseListColumnProps} className='course-list-column'>
+      <Row className="justify-content-md-center">
+        <Col {...courseListColumnProps} className="course-list-column">
           {children}
         </Col>
-        <Col {...columnConfig.sidebar} className='sidebar-column'>
+        <Col {...columnConfig.sidebar} className="sidebar-column">
           {!isCollapsed}
           <WidgetSidebar />
         </Col>

@@ -41,7 +41,7 @@ export const App = () => {
   React.useEffect(() => {
     if (
       authenticatedUser?.administrator ||
-      getConfig().NODE_ENV === 'development'
+      getConfig().NODE_ENV === "development"
     ) {
       window.loadEmptyData = () => {
         loadData({ ...fakeData.globalData, courses: [] });
@@ -74,9 +74,9 @@ export const App = () => {
       <Helmet>
         <title>{formatMessage(messages.pageTitle)}</title>
         <link
-          rel='shortcut icon'
+          rel="shortcut icon"
           href={getConfig().FAVICON_URL}
-          type='image/x-icon'
+          type="image/x-icon"
         />
       </Helmet>
       <div>
@@ -84,7 +84,7 @@ export const App = () => {
           <LearnerDashboardHeader />
           <main>
             {hasNetworkFailure ? (
-              <Alert variant='danger'>
+              <Alert variant="danger">
                 <ErrorPage
                   message={formatMessage(messages.errorMessage, {
                     supportEmail,
