@@ -5,12 +5,12 @@ import {
   Form,
   FormControl,
   Row,
-} from "@openedx/paragon";
-import PropTypes from "prop-types";
-import React from "react";
+} from '@openedx/paragon';
+import PropTypes from 'prop-types';
+import React from 'react';
 
-import WidgetSidebar from "../WidgetContainers/WidgetSidebar";
-import hooks from "./hooks";
+import WidgetSidebar from '../WidgetContainers/WidgetSidebar';
+import hooks from './hooks';
 
 export const columnConfig = {
   courseList: {
@@ -39,7 +39,7 @@ export const DashboardLayout = ({ children }) => {
   return (
     <Container>
       {/* Header Section */}
-      <Row className="banner" style={{ backgroundImage: "url(/Banner1.jpg)" }}>
+      <Row className="banner" style={{ backgroundImage: 'url(/Banner1.jpg)' }}>
         <Col
           className="banner-content d-flex justify-content-center align-items-center"
           md={6}

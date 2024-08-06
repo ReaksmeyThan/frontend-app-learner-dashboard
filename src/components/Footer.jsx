@@ -1,13 +1,13 @@
 import React from "react";
-import { Col, Container, Row } from "react-bootstrap";
+import { Col, Container, Row } from 'react-bootstrap';
 
 import {
   faFacebookF,
   faInstagram,
   faLinkedin,
   faYoutube,
-} from "@fortawesome/free-brands-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+} from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Footer = () => {
   return (
@@ -47,7 +47,7 @@ const Footer = () => {
               md={6}
               className="d-flex justify-content-center align-items-center"
             >
-              <img src="/plower.png" alt="Logo" style={{ maxWidth: "300px" }} />
+              <img src="/plower.png" alt="Logo" style={{ maxWidth: '300px' }} />
             </Col>
           </Row>
         </Container>
@@ -66,12 +66,12 @@ const Footer = () => {
               <img
                 src="/logo-white.png"
                 alt="Logo"
-                style={{ maxWidth: "200px" }}
+                style={{ maxWidth: '200px' }}
               />
 
               <ul
                 className="list-unstyled list-inline social-icons mt-3"
-                style={{ maxWidth: "300px" }}
+                style={{ maxWidth: '300px' }}
               >
                 <li className="list-inline-item">
                   <a href="#">
