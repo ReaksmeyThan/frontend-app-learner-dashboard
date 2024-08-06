@@ -1,4 +1,11 @@
-import { Button, Col, Container, Form, FormControl, Row } from "@openedx/paragon";
+import {
+  Button,
+  Col,
+  Container,
+  Form,
+  FormControl,
+  Row,
+} from "@openedx/paragon";
 import PropTypes from "prop-types";
 import React from "react";
 
@@ -8,8 +15,8 @@ import hooks from "./hooks";
 export const columnConfig = {
   courseList: {
     withSidebar: {
-      lg: { span: 12, offset:1 },
-      xl: { span: 8, offset: 0},
+      lg: { span: 12, offset: 1 },
+      xl: { span: 8, offset: 0 },
     },
     noSidebar: {
       lg: { span: 12, offset: 0 },
@@ -30,26 +37,29 @@ export const DashboardLayout = ({ children }) => {
     : columnConfig.courseList.noSidebar;
 
   return (
-    <Container fluid>
+    <Container>
       {/* Header Section */}
       <Row className="banner" style={{ backgroundImage: "url(/Banner1.jpg)" }}>
-        <Col className="banner-content" md={{ span: 5, offset: 2 }}>
-          <h1 className="title1">Welcome to CBC Academy </h1>
-          <h1 className="title2">Online Courses</h1>
+        <Col className="banner-content d-flex justify-content-center align-items-center" md={6}>
+          <div className="contain-title align-items-left">
+            <h1 className="title1">Welcome to CBC Academy </h1>
+            <h1 className="title2">Online Courses</h1>
 
-          <p>Build up your skills. Explore courses here</p>
-          <Form className="search-form d-flex mt-3">
-            <FormControl
-              type="text"
-              placeholder="What do you want to learn?"
-              className="search-input"
-            />
-            <Button className="search-button" type="button">
-              SEARCH
-              <i className="fa fa-search" />
-            </Button>
-          </Form>
+            <p>Build up your skills. Explore courses here</p>
+            <Form className="search-form d-flex mt-3">
+              <FormControl
+                type="text"
+                placeholder="What do you want to learn?"
+                className="search-input"
+              />
+              <Button className="search-button" type="button">
+                SEARCH
+                <i className="fa fa-search" />
+              </Button>
+            </Form>
+          </div>
         </Col>
+  
       </Row>
 
       {/* Main Content Section */}
