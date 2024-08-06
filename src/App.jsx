@@ -41,7 +41,7 @@ export const App = () => {
   React.useEffect(() => {
     if (
       authenticatedUser?.administrator ||
-      getConfig().NODE_ENV === "development"
+      getConfig().NODE_ENV === 'development'
     ) {
       window.loadEmptyData = () => {
         loadData({ ...fakeData.globalData, courses: [] });
