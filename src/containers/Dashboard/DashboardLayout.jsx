@@ -40,7 +40,10 @@ export const DashboardLayout = ({ children }) => {
     <Container>
       {/* Header Section */}
       <Row className="banner" style={{ backgroundImage: "url(/Banner1.jpg)" }}>
-        <Col className="banner-content d-flex justify-content-center align-items-center" md={6}>
+        <Col
+          className="banner-content d-flex justify-content-center align-items-center"
+          md={6}
+        >
           <div className="contain-title align-items-left">
             <h1 className="title1">Welcome to CBC Academy </h1>
             <h1 className="title2">Online Courses</h1>
@@ -59,7 +62,6 @@ export const DashboardLayout = ({ children }) => {
             </Form>
           </div>
         </Col>
-  
       </Row>
 
       {/* Main Content Section */}

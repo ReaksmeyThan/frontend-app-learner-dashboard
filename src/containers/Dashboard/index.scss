@@ -11,43 +11,40 @@
 @include media-breakpoint-down(lg) {
   .sidebar-column {
     // grid are inheriting dir="ltr" from the body, so we need to override it
-    [dir=ltr] & {
+    [dir="ltr"] & {
       padding: 0 map-get($spacers, 3);
     }
-    [dir=rtl] & {
+    [dir="rtl"] & {
       padding: 0 map-get($spacers, 3);
     }
   }
 }
-.banner{
-  margin:-7px -20px 0px -20px!important;
-  height: 450px;  
+.banner {
+  margin: -7px -20px 0px -20px !important;
+  height: 450px;
   width: auto;
   background-size: cover;
   background-position: center;
   display: flex;
-
-
 }
 .banner-content {
   padding-top: 30px;
 
-  color: #858A7E;
-  font-family:Arial, Helvetica, sans-serif;
- 
+  color: #858a7e;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.title1{
-  color:#21472E;
+.title1 {
+  color: #21472e;
   font-size: 60px;
-
 }
-.title2{
-  color:#D52330;
+.title2 {
+  color: #d52330;
   font-size: 60px;
 }
 @media (max-width: 1030px) {
-  .title1, .title2 {
+  .title1,
+  .title2 {
     font-size: 30px;
   }
 }
@@ -58,28 +55,24 @@
 }
 
 .search-input {
-
   border-radius: 0px !important;
   font-size: 16px;
- 
 }
-.form-control{
+.form-control {
   border-radius: 0px !important;
-
 }
 
 .search-button {
-  background-color: #21472E !important;
+  background-color: #21472e !important;
   border-radius: 0px !important;
 
   padding: 10px 20px;
   font-size: 16px;
   color: white;
   cursor: pointer;
-  .fa{
+  .fa {
     margin-left: 5px;
   }
-  
 }
 
 .search-button:hover {
