@@ -1,4 +1,4 @@
-@import "@openedx/paragon/scss/core/core";
+@import '@openedx/paragon/scss/core/core';
 
 .course-list-column {
   padding: 0 map-get($spacers, 4);
@@ -10,11 +10,11 @@
 
 @include media-breakpoint-down(lg) {
   .sidebar-column {
-    // grid are inheriting dir="ltr" from the body, so we need to override it
-    [dir="ltr"] & {
+    // grid are inheriting dir='ltr' from the body, so we need to override it
+    [dir='ltr'] & {
       padding: 0 map-get($spacers, 3);
     }
-    [dir="rtl"] & {
+    [dir='rtl'] & {
       padding: 0 map-get($spacers, 3);
     }
   }
