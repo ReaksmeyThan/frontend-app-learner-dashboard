@@ -32,12 +32,13 @@ export const CourseCard = ({
               <Card.Section className="pt-0">
                 <CourseCardDetails cardId={cardId} />
               </Card.Section>
+              <hr />
               <Card.Footer orientation={orientation}>
                 <CourseCardActions cardId={cardId} />
               </Card.Footer>
+              <CourseCardBanners cardId={cardId} />
             </Card.Body>
           </div>
-          <CourseCardBanners cardId={cardId} />
         </div>
       </Card>
     </div>

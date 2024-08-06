@@ -2,6 +2,7 @@
 
 .course-card {
   .card {
+
     .pgn__card-wrapper-image-cap.vertical {
       display: flex;
       min-height: $card-image-vertical-max-height;
@@ -26,6 +27,15 @@
         align-self: flex-end;
         white-space: nowrap;
       }
+    
+    }
+    .course-card-title{
+      color: #18324A !important;
+    }
+    .card-button{
+      border-radius: 0% !important;
+      color: #ffffff !important;
+    
     }
 
     .course-card-verify-ribbon-container {

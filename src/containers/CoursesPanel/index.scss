@@ -5,11 +5,13 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  
 }
 
 .course-list-title {
   font-size: $h2-font-size;
   margin: map-get($spacers, 3) 0;
+color: #21472E !important;
 }
 
 .course-list-loading {
