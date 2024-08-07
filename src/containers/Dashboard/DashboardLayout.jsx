@@ -36,7 +36,7 @@ export const DashboardLayout = ({ children }) => {
     : columnConfig.courseList.noSidebar;
 
   const handleSearch = () => {
-    const searchText = document.querySelector(".search-input").value;
+    const searchText = document.querySelector('.search-input').value;
     alert(`Searching for: ${searchText}`);
     // Add your search logic here
   };
@@ -44,7 +44,7 @@ export const DashboardLayout = ({ children }) => {
   return (
     <Container fluid>
       {/* Header Section */}
-      <Row className="banner d-flex justify-content-center align-content-center" style={{ backgroundImage: "url(/Banner1.jpg)" }} >
+      <Row className="banner d-flex justify-content-center align-content-center" style={{ backgroundImage: 'url(/Banner1.jpg)' }}>
         <Col {...courseListColumnProps}>
           <div className="contain-title align-items-left">
             <h1 className="title1">Welcome to CBC Academy </h1>
