@@ -31,17 +31,22 @@ export const columnConfig = {
 
 export const DashboardLayout = ({ children }) => {
   const { isCollapsed, sidebarShowing } = hooks.useDashboardLayoutData();
-
   const courseListColumnProps = sidebarShowing
     ? columnConfig.courseList.withSidebar
     : columnConfig.courseList.noSidebar;
 
+  const handleSearch = () => {
+    const searchText = document.querySelector('.search-input').value;
+    alert(`Searching for: ${searchText}`);
+    // Add your search logic here
+  };
+
   return (
-    <Container>
+    <Container className=" bg-accent-a-100">
       {/* Header Section */}
       <Row className="banner" style={{ backgroundImage: 'url(/Banner1.jpg)' }}>
         <Col
-          className="banner-content d-flex justify-content-center align-items-center"
+          className="banner-content d-flex justify-content-center align-items-center bg-accent-b"
           md={6}
         >
           <div className="contain-title align-items-left">
@@ -55,7 +60,7 @@ export const DashboardLayout = ({ children }) => {
                 placeholder="What do you want to learn?"
                 className="search-input"
               />
-              <Button className="search-button" type="button">
+              <Button className="search-button" type="button" onClick={handleSearch}>
                 SEARCH
                 <i className="fa fa-search" />
               </Button>

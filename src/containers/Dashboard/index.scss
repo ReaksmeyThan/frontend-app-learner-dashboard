@@ -1,5 +1,5 @@
 @import '@openedx/paragon/scss/core/core';
-
+*{}
 .course-list-column {
   padding: 0 map-get($spacers, 4);
 }
@@ -66,20 +66,28 @@
   background-color: #21472e !important;
   border-radius: 0px !important;
 
+  border: none !important;
   padding: 10px 20px;
   font-size: 16px;
   color: white;
   cursor: pointer;
+  
+
+  &:hover  {
+    background-color: #2a8d43 !important;
+    border-color:  #2a8d43 !important;;
+  }
+  &:active {
+  border-radius: 0% !important;
+  border: none !important;
+  }
+  
+
+
   .fa {
     margin-left: 5px;
   }
+
 }
 
-.search-button:hover {
-  background-color: #1a3a22;
-}
 
-.search-button:focus {
-  outline: none;
-  box-shadow: 0 0 0 0.2rem rgba(33, 71, 46, 0.5);
-}
