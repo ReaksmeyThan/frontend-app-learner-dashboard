@@ -31,9 +31,7 @@ export const columnConfig = {
 
 export const DashboardLayout = ({ children }) => {
   const { isCollapsed, sidebarShowing } = hooks.useDashboardLayoutData();
-  const courseListColumnProps = sidebarShowing
-    ? columnConfig.courseList.withSidebar
-    : columnConfig.courseList.noSidebar;
+  const courseListColumnProps = sidebarShowing? columnConfig.courseList.withSidebar: columnConfig.courseList.noSidebar;
 
   const handleSearch = () => {
     const searchText = document.querySelector('.search-input').value;

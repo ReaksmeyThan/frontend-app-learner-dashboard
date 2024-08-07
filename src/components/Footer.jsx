@@ -11,12 +11,16 @@ import {
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Footer = () => (
-  <footer>
+  <footer >
     {/* Top Footer */}
     <div className="footer-top">
-      <Container>
-        <Row>
-          <Col md={6} className="text-white">
+      <Container fluid className="d-flex flex-row align-content-center justify-content-center" >
+        <Row  >
+          <Col  
+            xl={{ span: 6, offset: 0}} 
+    
+            md={6} 
+           >
             <h2 className="text-white">Learn and Grow</h2>
             <p>
               Our edX learning experience is grounded in cutting-edge
@@ -44,8 +48,11 @@ const Footer = () => (
             </p>
           </Col>
           <Col
-            md={6}
-            className="d-flex justify-content-center align-items-center"
+
+            className=" d-flex justify-content-center align-items-center"
+        
+            md={6} 
+        
           >
             <img src="/plower.png" alt="Logo" style={{ maxWidth: '300px' }} />
           </Col>
@@ -55,12 +62,12 @@ const Footer = () => (
 
     {/* Bottom Footer */}
     <div className="footer-bottom">
-      <Container md={{ span: 12, offset: 2 }}>
+      <Container fluid>
         <Row className="text-center text-white text-md-left">
           {/* Logo and Social Media */}
           <Col
             xs={12}
-            md={3}
+            md={4}
             className="mb-4 mb-md-0 d-flex flex-column align-items-center"
           >
             <img
@@ -107,7 +114,7 @@ const Footer = () => (
             <h5 className="text-uppercase text-white mb-4 font-weight-bold">
               Browse Courses
             </h5>
-            <ul className="list-unstyled">
+            <ul className="list-unstyled  small">
               <li>
                 <a href="#">Programming</a>
               </li>
@@ -134,7 +141,7 @@ const Footer = () => (
             <h5 className="text-uppercase text-white mb-4 font-weight-bold">
               About Us
             </h5>
-            <ul className="list-unstyled">
+            <ul className="list-unstyled  small">
               <li>
                 <a href="#">Company Profile</a>
               </li>
@@ -158,7 +165,7 @@ const Footer = () => (
             <h5 className="text-uppercase text-white mb-4 font-weight-bold">
               Media
             </h5>
-            <ul className="list-unstyled">
+            <ul className="list-unstyled small">
               <li>
                 <a href="#">Programming</a>
               </li>
@@ -172,11 +179,11 @@ const Footer = () => (
           </Col>
 
           {/* Our Members */}
-          <Col xs={6} md={3} className="mb-4 mb-md-0">
+          <Col xs={6} md={2} className="mb-4 mb-md-0">
             <h5 className="text-uppercase text-white mb-4 font-weight-bold">
               Our Members
             </h5>
-            <ul className="list-unstyled">
+            <ul className="list-unstyled  small">
               <li>
                 <a href="#">Benefits</a>
               </li>
