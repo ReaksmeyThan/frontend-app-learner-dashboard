@@ -3,12 +3,22 @@
 .course-card {
   .card {
 
+
     .pgn__card-wrapper-image-cap.vertical {
       display: flex;
       min-height: $card-image-vertical-max-height;
+    
     }
     .pgn__card-image-cap {
-      border-bottom-left-radius: 0 !important;
+
+      border-top-right-radius: 0% !important;
+      border-top-left-radius: 2% !important;
+       border-bottom-left-radius: 2% !important;
+       
+       @media (max-width: 768px) {
+        border-top-right-radius: 2% !important;
+        border-bottom-left-radius: 0% !important;
+      }
     }
     .overflow-visible {
       overflow: visible;

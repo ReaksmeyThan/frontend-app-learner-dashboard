@@ -20,11 +20,11 @@ export const CourseCardImage = ({ cardId, orientation }) => {
   const { isVerified } = reduxHooks.useCardEnrollmentData(cardId);
   const { disableCourseTitle } = useActionDisabledState(cardId);
   const handleImageClicked = reduxHooks.useTrackCourseEvent(courseImageClicked, cardId, homeUrl);
-  const wrapperClassName = `pgn__card-wrapper-image-cap overflow-visible ${orientation}`;
+  const wrapperClassName = `pgn__card-wrapper-image-cap overflow-visible ${orientation} float-start d-flex justify-content-center align-content-center`;
   const image = (
     <>
       <img
-        className="pgn__card-image-cap show"
+        className="pgn__card-image-cap show d-flex float-start d-flex justify-content-center align-content-center"
         src={bannerImgSrc}
         alt={formatMessage(messages.bannerAlt)}
       />
