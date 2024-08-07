@@ -46,7 +46,8 @@ const Footer = () => (
               your new capabilities in the context of your job.
             </p>
           </Col>
-          <Col className=" d-flex justify-content-center align-items-center"
+          <Col
+            className=" d-flex justify-content-center align-items-center"
             md={6}
           >
             <img src="/plower.png" alt="Logo" style={{ maxWidth: '300px' }} />
