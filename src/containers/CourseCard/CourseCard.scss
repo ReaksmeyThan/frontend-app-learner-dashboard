@@ -70,18 +70,24 @@
   }
 
   .course-card-banners {
+
+
     > .alert {
       border-radius: 0;
       box-shadow: none;
-      padding: map-get($spacers, 3) map-get($spacers, 4);
 
       &:last-of-type {
-        border-bottom-left-radius: $alert-border-radius;
+        border-bottom-left-radius:0 !important;
         border-bottom-right-radius: $alert-border-radius;
+
+        background-color: #E1ECC5 !important;
       }
+ 
+
     }
 
     .related-programs-banner {
+  
       .related-programs-list-container {
         list-style: none;
         display: inline;

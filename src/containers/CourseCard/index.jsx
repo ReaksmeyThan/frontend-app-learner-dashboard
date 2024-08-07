@@ -24,19 +24,19 @@ export const CourseCard = ({
         <div className="d-flex flex-column w-100">
           <div {...(!isCollapsed && { className: 'd-flex' })}>
             <CourseCardImage cardId={cardId} />
-            <Card.Body>
+            <Card.Body className="flex-column d-flex">
               <Card.Header
                 title={<CourseCardTitle cardId={cardId} />}
                 actions={<CourseCardMenu cardId={cardId} />}
               />
-              <Card.Section className="pt-0">
+              <Card.Section className="pt-auto">
                 <CourseCardDetails cardId={cardId} />
               </Card.Section>
               <hr />
               <Card.Footer orientation={orientation}>
                 <CourseCardActions cardId={cardId} />
               </Card.Footer>
-              <CourseCardBanners cardId={cardId} />
+              <CourseCardBanners cardId={cardId} className=" h-200" />
             </Card.Body>
           </div>
         </div>
