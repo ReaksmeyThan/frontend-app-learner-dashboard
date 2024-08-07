@@ -11,7 +11,7 @@
 .course-list-title {
   font-size: $h2-font-size;
   margin: map-get($spacers, 3) 0;
-color: #21472E !important;
+  color: #472128 !important;
 }
 
 .course-list-loading {
@@ -22,8 +22,10 @@ color: #21472E !important;
 }
 
 .course-filter-controls-container {
-  text-align: right;
+
   align-self: center;
+  //background-color: #472128 !important;
+  border: none;
 }
 
 @include media-breakpoint-down(md) {
@@ -35,6 +37,7 @@ color: #21472E !important;
   .course-filter-controls-container {
     text-align: left;
     align-self: flex-start;
+   
   }
 
   .course-list-title {

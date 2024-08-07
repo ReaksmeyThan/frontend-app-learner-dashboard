@@ -15,8 +15,8 @@ import hooks from './hooks';
 export const columnConfig = {
   courseList: {
     withSidebar: {
-      lg: { span: 12, offset: 1 },
-      xl: { span: 8, offset: 0 },
+      lg: { span: 12, offset: 0 },
+      xl: { span: 9, offset: 0 },
     },
     noSidebar: {
       lg: { span: 12, offset: 0 },
@@ -25,7 +25,7 @@ export const columnConfig = {
   },
   sidebar: {
     lg: { span: 12, offset: 0 },
-    xl: { span: 4, offset: 1 },
+    xl: { span: 4, offset: 0 },
   },
 };
 
@@ -42,12 +42,12 @@ export const DashboardLayout = ({ children }) => {
   };
 
   return (
-    <Container className=" bg-accent-a-100">
+    <Container fluid>
       {/* Header Section */}
-      <Row className="banner" style={{ backgroundImage: 'url(/Banner1.jpg)' }}>
+      <Row className="banner d-flex justify-content-center align-content-center" style={{ backgroundImage: 'url(/Banner1.jpg)' }}>
         <Col
-          className="banner-content d-flex justify-content-center align-items-center bg-accent-b"
-          md={6}
+        {...courseListColumnProps}
+    
         >
           <div className="contain-title align-items-left">
             <h1 className="title1">Welcome to CBC Academy </h1>
@@ -70,7 +70,7 @@ export const DashboardLayout = ({ children }) => {
       </Row>
 
       {/* Main Content Section */}
-      <Row className="justify-content-md-center">
+      <Row className="flex-column d-flex justify-content-center align-content-center">
         <Col {...courseListColumnProps} className="course-list-column">
           {children}
         </Col>

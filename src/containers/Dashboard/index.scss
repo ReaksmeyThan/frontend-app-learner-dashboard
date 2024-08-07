@@ -1,5 +1,5 @@
 @import '@openedx/paragon/scss/core/core';
-*{}
+
 .course-list-column {
   padding: 0 map-get($spacers, 4);
 }
@@ -20,7 +20,7 @@
   }
 }
 .banner {
-  margin: -7px -20px 0px -20px !important;
+  //margin: -7px -20px 0px -20px !important;
   height: 450px;
   width: auto;
   background-size: cover;
