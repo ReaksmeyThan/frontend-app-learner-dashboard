@@ -47,12 +47,10 @@ export const DashboardLayout = ({ children }) => {
       <Row className="banner d-flex justify-content-center align-content-center" style={{ backgroundImage: 'url(/Banner1.jpg)' }}>
         <Col
         {...courseListColumnProps}
-    
         >
           <div className="contain-title align-items-left">
             <h1 className="title1">Welcome to CBC Academy </h1>
             <h1 className="title2">Online Courses</h1>
-
             <p>Build up your skills. Explore courses here</p>
             <Form className="search-form d-flex mt-3">
               <FormControl
