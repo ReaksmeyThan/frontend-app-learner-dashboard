@@ -5,12 +5,12 @@ import {
   Form,
   FormControl,
   Row,
-} from '@openedx/paragon';
-import PropTypes from 'prop-types';
-import React from 'react';
+} from "@openedx/paragon";
+import PropTypes from "prop-types";
+import React from "react";
 
-import WidgetSidebar from '../WidgetContainers/WidgetSidebar';
-import hooks from './hooks';
+import WidgetSidebar from "../WidgetContainers/WidgetSidebar";
+import hooks from "./hooks";
 
 export const columnConfig = {
   courseList: {
@@ -36,7 +36,7 @@ export const DashboardLayout = ({ children }) => {
     : columnConfig.courseList.noSidebar;
 
   const handleSearch = () => {
-    const searchText = document.querySelector('.search-input').value;
+    const searchText = document.querySelector(".search-input").value;
     alert(`Searching for: ${searchText}`);
     // Add your search logic here
   };
@@ -44,10 +44,11 @@ export const DashboardLayout = ({ children }) => {
   return (
     <Container fluid>
       {/* Header Section */}
-      <Row className="banner d-flex justify-content-center align-content-center" style={{ backgroundImage: 'url(/Banner1.jpg)' }}>
-        <Col
-        {...courseListColumnProps}
-        >
+      <Row
+        className="banner d-flex justify-content-center align-content-center"
+        style={{ backgroundImage: "url(/Banner1.jpg)" }}
+      >
+        <Col {...courseListColumnProps}>
           <div className="contain-title align-items-left">
             <h1 className="title1">Welcome to CBC Academy </h1>
             <h1 className="title2">Online Courses</h1>
@@ -58,7 +59,11 @@ export const DashboardLayout = ({ children }) => {
                 placeholder="What do you want to learn?"
                 className="search-input"
               />
-              <Button className="search-button" type="button" onClick={handleSearch}>
+              <Button
+                className="search-button"
+                type="button"
+                onClick={handleSearch}
+              >
                 SEARCH
                 <i className="fa fa-search" />
               </Button>
