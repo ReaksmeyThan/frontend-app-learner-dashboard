@@ -15,11 +15,7 @@ const Footer = () => (
     <div className="footer-top font-inter">
       <Container fluid className="d-flex flex-row align-content-center justify-content-center">
         <Row>
-          <Col
-          className=" d-flex flex-column justify-content-center "
-          xl={{ span: 5, offset: 1 }}
-          md={6}
-          >
+          <Col className=" d-flex flex-column justify-content-center " xl={{ span: 5, offset: 1 }} md={6} >
             <h2 className="text-white">Learn and Grow</h2>
             <p>
               Our edX learning experience is grounded in cutting-edge
