@@ -11,7 +11,7 @@
 .course-list-title {
   font-size: $h2-font-size;
   margin: map-get($spacers, 3) 0;
-  color: #472128 !important;
+  color: #21472E !important;
 }
 
 .course-list-loading {
@@ -40,8 +40,5 @@
    
   }
 
-  .course-list-title {
-    font-size: $h3-font-size;
-    margin: map-get($spacers, 2) 0;
-  }
+
 }

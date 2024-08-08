@@ -41,7 +41,7 @@ export const DashboardLayout = ({ children }) => {
   };
 
   return (
-    <Container fluid>
+    <Container fluid className="font-inter">
       {/* Header Section */}
       <Row
         className="banner d-flex justify-content-center align-content-center"

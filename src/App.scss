@@ -11,6 +11,7 @@ $input-focus-box-shadow: $input-box-shadow; // hack to get upgrade to paragon 4.
 
 @import "~@edx/frontend-component-footer/dist/_footer";
 
+
 .text-ellipsis {
   overflow: hidden;
   text-overflow: ellipsis;
@@ -36,7 +37,6 @@ $input-focus-box-shadow: $input-box-shadow; // hack to get upgrade to paragon 4.
 
   header {
     flex: 0 0 auto;
-
     .logo {
     
       display: block;
@@ -72,6 +72,7 @@ $input-focus-box-shadow: $input-box-shadow; // hack to get upgrade to paragon 4.
 footer {
   flex: 0;
   color: #ffffff;
+
 }
 .footer-top {
   background: linear-gradient(135deg, #12492A, #2BAF65);
@@ -87,20 +88,23 @@ footer {
 }
 
 .footer-bottom {
+
   background-color: #374236;
 
   padding: 20px 0;
 }
 
 .footer-bottom a {
-
   text-decoration: none;
-  color: #ffffff;
+  color: hsl(0, 0%, 100%);
+  &:hover{
+    color: #2BAF65;
+  }
 }
 
 .footer-bottom .social-icons a {
+
   color: #ffffff;
-  font-size: 18px;
   margin-right: 10px;
 }
 
@@ -117,13 +121,12 @@ footer {
   text-align: center;
   margin-right: 10px;
   font-size: 24px;
+
+  &:hover{
+    background-color: #2BAF65;
+  &i{
+    vertical-align: middle;
+  }
+  }
 }
 
-.social-icons a:hover {
-  background-color: #2BAF65;
-
-}
-
-.social-icons i {
-  vertical-align: middle;
-}
