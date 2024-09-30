@@ -11,7 +11,7 @@ import { Col, Container, Row } from 'react-bootstrap';
 import { useTranslation } from 'react-i18next';
 import logoWhite from '../assets/logo-white.png';
 import plower from '../assets/plower.png';
-import '../i18n';
+
 import './Footer.scss';
 
 const Footer = () => {
