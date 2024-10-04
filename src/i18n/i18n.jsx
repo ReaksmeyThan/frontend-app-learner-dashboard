@@ -16,7 +16,7 @@ i18n
     },
     fallbackLng: 'en',
     // disabled in production
-    debug: false,
+    debug: true,
     // can have multiple namespaces, in case you want to divide a huge
     // translation into smaller pieces and load them on demand
     ns: ['tran'],
