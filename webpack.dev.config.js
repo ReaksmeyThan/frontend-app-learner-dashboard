@@ -23,7 +23,7 @@ config.plugins.push(
       },
       {
         from: path.resolve(__dirname, 'public', 'assets'),
-        to: path.join(__dirname, 'dist', 'images'),
+        to: path.join(__dirname, 'dist', 'assets'),
         noErrorOnMissing: true,
       },
     ],
