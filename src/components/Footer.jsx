@@ -6,33 +6,13 @@ import {
   faYoutube,
 } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React, { Component, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
-import { Trans, useTranslation, withTranslation } from 'react-i18next';
+import { useTranslation } from 'react-i18next';
 import logoWhite from '../assets/logo-white.png';
-import plower from '../assets/plower.png';
-
+import '../i18n';
 import './Footer.scss';
 
-// Class-based component using HOC
-// eslint-disable-next-line react/prefer-stateless-function
-class LegacyWelcomeClass extends Component {
-  render() {
-    // eslint-disable-next-line react/prop-types
-    const { t } = this.props;
-    return <h2>{t('title')}</h2>;
-  }
-}
-const Welcome = withTranslation()(LegacyWelcomeClass);
-
-// Functional component using Trans
-const MyComponent = () => (
-  <Trans i18nKey="description.part1">
-    To get started, edit <code>src/App.js</code> and save to reload.
-  </Trans>
-);
-
-// Footer component
 const Footer = () => {
   const { i18n, t } = useTranslation();
 
@@ -50,6 +30,7 @@ const Footer = () => {
   return (
     <footer>
       {/* Top Footer */}
+
       <div className="footer-top font-inter">
         <Container
           fluid
@@ -57,24 +38,32 @@ const Footer = () => {
         >
           <Row>
             <Col
-              className="d-flex flex-column justify-content-center"
+              className=" d-flex flex-column justify-content-center "
               xl={{ span: 5, offset: 1 }}
               md={6}
             >
-              <h2 className="text-white">{t('learn&grow')}</h2>
-              <p>{t('learn&grow-detail')}</p>
-              <strong>{t('experience')}</strong>
-              <p>{t('experience-detail')}</p>
+              <h2 className="text-white"> {t('learn&grow')}</h2>
+              <p>
+                {t('learn&grow-detail')}
+              </p>
+              <strong> {t('experience')}</strong>
+              <p>
+                {t('experience-detail')}
+              </p>
               <strong>{t('practice')}</strong>
-              <p>{t('practice-detail')}</p>
+              <p>
+                {t('practice-detail')}
+              </p>
               <strong>{t('apply')}</strong>
-              <p>{t('apply-detail')}</p>
+              <p>
+                {t('apply-detail')}
+              </p>
             </Col>
             <Col
-              className="d-flex justify-content-center align-items-center"
+              className=" d-flex justify-content-center align-items-center"
               md={6}
             >
-              <img src={plower} alt="Logo" style={{ maxWidth: '300px' }} />
+              <img src="/plower.png" alt="Logo" style={{ maxWidth: '300px' }} />
             </Col>
           </Row>
         </Container>
@@ -99,23 +88,23 @@ const Footer = () => {
                 className="list-unstyled list-inline social-icons mt-3"
                 style={{ maxWidth: '300px' }}
               >
-                <li className="list-inline-item border-green rounded-circle p-2">
-                  <a href="/">
+                <li className="list-inline-item  border-green rounded-circle p-2">
+                  <a href="#">
                     <FontAwesomeIcon icon={faFacebookF} />
                   </a>
                 </li>
                 <li className="list-inline-item">
-                  <a href="/">
+                  <a href="#">
                     <FontAwesomeIcon icon={faYoutube} />
                   </a>
                 </li>
                 <li className="list-inline-item">
-                  <a href="/">
+                  <a href="#">
                     <FontAwesomeIcon icon={faLinkedin} />
                   </a>
                 </li>
                 <li className="list-inline-item">
-                  <a href="/">
+                  <a href="#">
                     <FontAwesomeIcon icon={faInstagram} />
                   </a>
                 </li>
@@ -129,24 +118,24 @@ const Footer = () => {
               <h5 className="text-uppercase text-white mb-4 font-weight-bold">
                 {t('browseCourses')}
               </h5>
-              <ul className="list-unstyled small">
+              <ul className="list-unstyled  small">
                 <li>
-                  <a href="/">Programming</a>
+                  <a href="#">Programming</a>
                 </li>
                 <li>
-                  <a href="/">Learn Economics</a>
+                  <a href="#">Learn Economics</a>
                 </li>
                 <li>
-                  <a href="/">Learn Project</a>
+                  <a href="#">Learn Project</a>
                 </li>
                 <li>
-                  <a href="/">Learn Business</a>
+                  <a href="#">Learn Business</a>
                 </li>
                 <li>
-                  <a href="/">Learn Software</a>
+                  <a href="#">Learn Software</a>
                 </li>
                 <li>
-                  <a href="/">Learn Computer</a>
+                  <a href="#">Learn Computer</a>
                 </li>
               </ul>
             </Col>
@@ -156,21 +145,21 @@ const Footer = () => {
               <h5 className="text-uppercase text-white mb-4 font-weight-bold">
                 {t('aboutUs')}
               </h5>
-              <ul className="list-unstyled small">
+              <ul className="list-unstyled  small">
                 <li>
-                  <a href="/">Company Profile</a>
+                  <a href="#">Company Profile</a>
                 </li>
                 <li>
-                  <a href="/">Vision, Mission & Core Value</a>
+                  <a href="#">Vision, Mission & Core Value</a>
                 </li>
                 <li>
-                  <a href="/">Shareholders</a>
+                  <a href="#">Shareholders</a>
                 </li>
                 <li>
-                  <a href="/">Board of Directors</a>
+                  <a href="#">Board of Directors</a>
                 </li>
                 <li>
-                  <a href="/">Management Team</a>
+                  <a href="#">Management Team</a>
                 </li>
               </ul>
             </Col>
@@ -182,21 +171,19 @@ const Footer = () => {
               </h5>
               <ul className="list-unstyled small">
                 <li>
-                  <a href="/">Programming</a>
+                  <a href="#">Programming</a>
                 </li>
                 <li>
-                  <a href="/">CSR Activities</a>
+                  <a href="#">CSR Activities</a>
                 </li>
                 <li>
-                  <a href="/">Videos and Photos</a>
+                  <a href="#">Videos and Photos</a>
                 </li>
               </ul>
             </Col>
-
-            {/* Language Selection */}
+            {/* Our Members */}
             <Col xs={6} md={2} className="mb-4 mb-md-0">
-              <Welcome />
-              <MyComponent />
+
               <div>
                 <h5 className="text-uppercase text-white mb-4 font-weight-bold">
                   {t('language')}
