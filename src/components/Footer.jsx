@@ -13,6 +13,35 @@ import logoWhite from '../assets/logo-white.png';
 import plower from '../assets/plower.png';
 
 import './Footer.scss';
+import { useTranslation, withTranslation, Trans } from 'react-i18next';
+
+
+
+// use hoc for class based components
+class LegacyWelcomeClass extends Component {
+  render() {
+    const { t } = this.props;
+    return <h2>{t('title')}</h2>;
+  }
+}
+const Welcome = withTranslation()(LegacyWelcomeClass);
+
+// Component using the Trans component
+function MyComponent() {
+  return (
+    <Trans i18nKey="description.part1">
+      To get started, edit <code>src/App.js</code> and save to reload.
+    </Trans>
+  );
+}
+
+// page uses the hook
+function Page() {
+  const { t, i18n } = useTranslation();
+
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng);
+  };
 
 const Footer = () => {
   const { i18n, t } = useTranslation();
@@ -27,6 +56,8 @@ const Footer = () => {
       localStorage.setItem('i18nextLng', 'en');
     }
   }, []);
+
+
 
   return (
     <footer>
@@ -184,7 +215,8 @@ const Footer = () => {
             </Col>
             {/* Our Members */}
             <Col xs={6} md={2} className="mb-4 mb-md-0">
-
+            <Welcome />
+            <MyComponent />
               <div>
                 <h5 className="text-uppercase text-white mb-4 font-weight-bold">
                   {t('language')}
