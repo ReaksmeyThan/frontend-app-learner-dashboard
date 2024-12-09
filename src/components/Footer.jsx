@@ -166,7 +166,7 @@ const Footer = () => {
             {/* Our Members */}
             <Col xs={6} md={1} className="mb-4 mb-md-0">
               <div>
-                <h4 className="text-uppercase text-white mb-4 ">
+                {/* <h4 className="text-uppercase text-white mb-4 ">
                   {formatMessage(messages.language)}
                 </h4>
                 <select
@@ -176,7 +176,7 @@ const Footer = () => {
                 >
                   <option value="en">English</option>
                   <option value="km">ភាសាខ្មែរ</option>
-                </select>
+                </select> */}
               </div>
             </Col>
           </Row>
