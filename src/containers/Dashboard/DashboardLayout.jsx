@@ -40,7 +40,7 @@ export const DashboardLayout = ({ children }) => {
   //   // Add your search logic here
   // };
 
-  const { formatMessage } = useIntl();
+  useIntl();
 
   useEffect(() => {
     // Ensuring language preference is consistent
@@ -51,7 +51,6 @@ export const DashboardLayout = ({ children }) => {
 
   return (
     <Container fluid className="font-inter">
-
 
       {/* Main Content Section */}
       <Row className="flex-column d-flex justify-content-center align-content-center">

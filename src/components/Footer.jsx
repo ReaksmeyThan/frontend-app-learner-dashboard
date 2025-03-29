@@ -16,11 +16,12 @@ const Footer = () => {
 
   // Initialize selected language from localStorage or default to 'en'
   const [selectedLanguage, setSelectedLanguage] = useState(
-    localStorage.getItem('i18nextLng') || 'en'
+    localStorage.getItem('i18nextLng') || 'en',
   );
 
   useEffect(() => {
     // Apply translations dynamically on initial load
+    // eslint-disable-next-line no-use-before-define
     translatePage(selectedLanguage);
   }, [selectedLanguage]);
 
@@ -29,6 +30,7 @@ const Footer = () => {
     elements.forEach((element) => {
       const key = element.getAttribute('data-translate-key');
       const translatedText = messages[languageCode]?.[key]?.defaultMessage || key;
+      // eslint-disable-next-line no-param-reassign
       element.textContent = translatedText;
     });
   };
@@ -62,25 +64,25 @@ const Footer = () => {
               <ul className="list-inline m-0">
                 <li className="list-inline-item mx-2">
                   <a href="#" className="text-white small" data-translate-key="myCourse">
-                    {formatMessage({ id: `myCourse`, defaultMessage: messages[selectedLanguage]?.myCourse })}
+                    {formatMessage({ id: 'myCourse', defaultMessage: messages[selectedLanguage]?.myCourse })}
                   </a>
                 </li>
                 |
                 <li className="list-inline-item mx-2">
                   <a href="#" className="text-white small" data-translate-key="library">
-                    {formatMessage({ id: `library`, defaultMessage: messages[selectedLanguage]?.library })}
+                    {formatMessage({ id: 'library', defaultMessage: messages[selectedLanguage]?.library })}
                   </a>
                 </li>
                 |
                 <li className="list-inline-item mx-2">
                   <a href="#" className="text-white small" data-translate-key="contactUs">
-                    {formatMessage({ id: `contactUs`, defaultMessage: messages[selectedLanguage]?.contactUs })}
+                    {formatMessage({ id: 'contactUs', defaultMessage: messages[selectedLanguage]?.contactUs })}
                   </a>
                 </li>
                 |
                 <li className="list-inline-item mx-2">
                   <a href="#" className="text-white small" data-translate-key="account">
-                    {formatMessage({ id: `account`, defaultMessage: messages[selectedLanguage]?.account })}
+                    {formatMessage({ id: 'account', defaultMessage: messages[selectedLanguage]?.account })}
                   </a>
                 </li>
               </ul>
