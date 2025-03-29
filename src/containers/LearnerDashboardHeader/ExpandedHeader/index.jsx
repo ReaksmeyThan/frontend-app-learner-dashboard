@@ -6,6 +6,8 @@ import { Button } from '@openedx/paragon';
 import urls from 'data/services/lms/urls';
 import { reduxHooks } from 'hooks';
 
+// eslint-disable-next-line import/no-extraneous-dependencies
+import { getConfig } from '@testing-library/react';
 import BrandLogo from '../BrandLogo';
 import { findCoursesNavClicked, useIsCollapsed } from '../hooks';
 import messages from '../messages';
@@ -16,9 +18,7 @@ export const ExpandedHeader = () => {
   const { courseSearchUrl } = reduxHooks.usePlatformSettingsData();
   const isCollapsed = useIsCollapsed();
 
-  const exploreCoursesClick = findCoursesNavClicked(
-    urls.baseAppUrl(courseSearchUrl),
-  );
+  const exploreCoursesClick = findCoursesNavClicked(urls.baseAppUrl(courseSearchUrl));
 
   if (isCollapsed) {
     return null;
@@ -29,40 +29,28 @@ export const ExpandedHeader = () => {
       <div className="flex-grow-1 d-flex align-items-center">
         <BrandLogo />
 
-        <Button
-          as="a"
-          href="urls.baseAppUrl(courseSearchUrl)"
-          variant="inverse-primary"
-          className="p-4 course-link"
-        >
+        <Button as="a" href={`${getConfig().LMS_BASE_URL}`} variant="inverse-primary" className="p-4">
+          {formatMessage(messages.home)}
+        </Button>
+
+        <Button as="a" href="urls.baseAppUrl(courseSearchUrl)" variant="inverse-primary" className="p-4 course-link">
           {formatMessage(messages.course)}
         </Button>
-        {/* <Button
-          as="a"
-          href={urls.programsUrl()}
-          variant="inverse-primary"
-          className="p-4"
-        >
-          {formatMessage(messages.program)}
-        </Button> */}
-        <Button
-          as="a"
-          href={urls.baseAppUrl(courseSearchUrl)}
-          variant="inverse-primary"
-          className="p-4"
-          onClick={exploreCoursesClick}
-        >
+
+        <Button as="a" href={urls.baseAppUrl(courseSearchUrl)} variant="inverse-primary" className="p-4" onClick={exploreCoursesClick}>
           {formatMessage(messages.discoverNew)}
         </Button>
+
         <span className="flex-grow-1" />
-        {/* <Button
+        <Button
           as="a"
           href={getConfig().SUPPORT_URL}
           variant="inverse-primary"
           className="p-4"
         >
           {formatMessage(messages.help)}
-        </Button> */}
+        </Button>
+
       </div>
 
       <AuthenticatedUserDropdown />

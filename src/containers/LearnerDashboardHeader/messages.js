@@ -1,6 +1,11 @@
 import { defineMessages } from '@edx/frontend-platform/i18n';
 
 const messages = defineMessages({
+  home: {
+    id: 'learnerVariantDashboard.menu.dashboard.label',
+    defaultMessage: 'Home',
+    description: 'The text for the user menu Dashboard navigation link.',
+  },
   dashboard: {
     id: 'learnerVariantDashboard.menu.dashboard.label',
     defaultMessage: 'Dashboard',
@@ -48,7 +53,7 @@ const messages = defineMessages({
   },
   course: {
     id: 'learnerVariantDashboard.course',
-    defaultMessage: 'Courses',
+    defaultMessage: 'My Courses',
     description: 'Header link for switching to dashboard page.',
   },
   program: {
@@ -58,7 +63,7 @@ const messages = defineMessages({
   },
   discoverNew: {
     id: 'learnerVariantDashboard.discoverNew',
-    defaultMessage: 'Discover New',
+    defaultMessage: 'Explore Courses',
     description: 'Header link for switching to discover page.',
   },
   logoAltText: {
