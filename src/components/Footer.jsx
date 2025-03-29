@@ -1,8 +1,8 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
+import { getConfig } from '@edx/frontend-platform';
+import { useIntl } from '@edx/frontend-platform/i18n'; // Use useIntl hook
 import React, { useEffect, useState } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
-
-import { useIntl } from '@edx/frontend-platform/i18n'; // Use useIntl hook
 import logoWhite from '../assets/logo-white.png';
 import messages from '../containers/Dashboard/messages'; // Import messages directly
 import './Footer.scss';
@@ -63,25 +63,25 @@ const Footer = () => {
             <Col xs={12} md={12} lg={4} className="mb-4 mb-md-0 d-flex align-items-center justify-content-center">
               <ul className="list-inline m-0">
                 <li className="list-inline-item mx-2">
-                  <a href="#" className="text-white small" data-translate-key="myCourse">
+                  <a href={getConfig().LMS_BASE_URL} className="text-white small" data-translate-key="myCourse">
                     {formatMessage({ id: 'myCourse', defaultMessage: messages[selectedLanguage]?.myCourse })}
                   </a>
                 </li>
                 |
                 <li className="list-inline-item mx-2">
-                  <a href="#" className="text-white small" data-translate-key="library">
+                  <a href={`${getConfig().LMS_BASE_URL}/library`} className="text-white small" data-translate-key="library">
                     {formatMessage({ id: 'library', defaultMessage: messages[selectedLanguage]?.library })}
                   </a>
                 </li>
                 |
                 <li className="list-inline-item mx-2">
-                  <a href="#" className="text-white small" data-translate-key="contactUs">
+                  <a href={`${getConfig().LMS_BASE_URL}/contact`} className="text-white small" data-translate-key="contactUs">
                     {formatMessage({ id: 'contactUs', defaultMessage: messages[selectedLanguage]?.contactUs })}
                   </a>
                 </li>
                 |
                 <li className="list-inline-item mx-2">
-                  <a href="#" className="text-white small" data-translate-key="account">
+                  <a href={getConfig().ACCOUNT_SETTINGS_URL} className="text-white small" data-translate-key="account">
                     {formatMessage({ id: 'account', defaultMessage: messages[selectedLanguage]?.account })}
                   </a>
                 </li>
