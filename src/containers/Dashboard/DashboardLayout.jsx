@@ -50,7 +50,7 @@ export const DashboardLayout = ({ children }) => {
   }, []);
 
   return (
-    <Container fluid className="font-inter h-100">
+    <Container fluid className="font-inter">
 
 
       {/* Main Content Section */}

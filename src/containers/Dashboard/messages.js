@@ -1,21 +1,16 @@
-import { defineMessages } from '@edx/frontend-platform/i18n';
-
-const messages = defineMessages({
-  welcome: {
-    id: 'welcome',
-    description: '',
-    defaultMessage: 'Welcome to CBC Academy',
+const messages = {
+  en: {
+    myCourse: { id: 'myCourse', defaultMessage: 'My Course' },
+    library: { id: 'library', defaultMessage: 'Library' },
+    contactUs: { id: 'contactUs', defaultMessage: 'Contact Us' },
+    account: { id: 'account', defaultMessage: 'Account' },
   },
-  onlineCourses: {
-    id: 'onlineCourses',
-    description: '',
-    defaultMessage: 'Online Courses',
+  kh: {
+    myCourse: { id: 'myCourse', defaultMessage: 'វគ្គសិក្សារបស់ខ្ញុំ' },
+    library: { id: 'library', defaultMessage: 'បណ្ណាល័យ' },
+    contactUs: { id: 'contactUs', defaultMessage: 'ទាក់ទងមកយើង' },
+    account: { id: 'account', defaultMessage: 'គណនី' },
   },
-  buildSkills: {
-    id: 'buildSkills',
-    description: '',
-    defaultMessage: 'Build up your skills. Explore courses here',
-  },
-});
+};
 
 export default messages;

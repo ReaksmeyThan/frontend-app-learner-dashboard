@@ -1,25 +1,43 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 
+import { useIntl } from '@edx/frontend-platform/i18n'; // Use useIntl hook
 import logoWhite from '../assets/logo-white.png';
+import messages from '../containers/Dashboard/messages'; // Import messages directly
 import './Footer.scss';
 
 const Footer = () => {
+  const { formatMessage } = useIntl(); // Destructure formatMessage from useIntl
   const supportedLanguages = [
     { code: 'en', label: 'English' },
-    { code: 'kh', label: 'Khmer' },
+    { code: 'kh', label: 'ខ្មែរ' },
   ];
-  const [selectedLanguage, setSelectedLanguage] = useState(supportedLanguages[0].code);
+
+  // Initialize selected language from localStorage or default to 'en'
+  const [selectedLanguage, setSelectedLanguage] = useState(
+    localStorage.getItem('i18nextLng') || 'en'
+  );
+
+  useEffect(() => {
+    // Apply translations dynamically on initial load
+    translatePage(selectedLanguage);
+  }, [selectedLanguage]);
+
+  const translatePage = (languageCode) => {
+    const elements = document.querySelectorAll('[data-translate-key]');
+    elements.forEach((element) => {
+      const key = element.getAttribute('data-translate-key');
+      const translatedText = messages[languageCode]?.[key]?.defaultMessage || key;
+      element.textContent = translatedText;
+    });
+  };
 
   const onLanguageSelected = () => {
-    console.info(`Selected language: ${selectedLanguage}`);
-    // Add logic to handle language change here
     const selectedLang = supportedLanguages.find((lang) => lang.code === selectedLanguage);
     if (selectedLang) {
       localStorage.setItem('i18nextLng', selectedLang.code);
-      // window.alert(`Language changed to: ${selectedLang.label}`);
-      window.location.reload(); // Reload to apply the language change
+      translatePage(selectedLang.code); // Apply translations dynamically
     }
   };
 
@@ -43,26 +61,26 @@ const Footer = () => {
             <Col xs={12} md={12} lg={4} className="mb-4 mb-md-0 d-flex align-items-center justify-content-center">
               <ul className="list-inline m-0">
                 <li className="list-inline-item mx-2">
-                  <a href="#" className="text-white small">
-                    'My Courses'
+                  <a href="#" className="text-white small" data-translate-key="myCourse">
+                    {formatMessage({ id: `myCourse`, defaultMessage: messages[selectedLanguage]?.myCourse })}
                   </a>
                 </li>
                 |
                 <li className="list-inline-item mx-2">
-                  <a href="#" className="text-white small">
-                    Library
+                  <a href="#" className="text-white small" data-translate-key="library">
+                    {formatMessage({ id: `library`, defaultMessage: messages[selectedLanguage]?.library })}
                   </a>
                 </li>
                 |
                 <li className="list-inline-item mx-2">
-                  <a href="#" className="text-white small">
-                    Contact Us
+                  <a href="#" className="text-white small" data-translate-key="contactUs">
+                    {formatMessage({ id: `contactUs`, defaultMessage: messages[selectedLanguage]?.contactUs })}
                   </a>
                 </li>
                 |
                 <li className="list-inline-item mx-2">
-                  <a href="#" className="text-white small">
-                    Account
+                  <a href="#" className="text-white small" data-translate-key="account">
+                    {formatMessage({ id: `account`, defaultMessage: messages[selectedLanguage]?.account })}
                   </a>
                 </li>
               </ul>
@@ -72,14 +90,24 @@ const Footer = () => {
             <Col xs={9} md={9} lg={2} className="pb-4">
               <p className="mb-0">Change Language</p>
               <div className="d-flex align-items-center">
-                <select className="form-select" value={selectedLanguage} onChange={(e) => setSelectedLanguage(e.target.value)}>
+                <select
+                  className="form-select"
+                  value={selectedLanguage}
+                  onChange={(e) => setSelectedLanguage(e.target.value)}
+                  aria-label="Select Language"
+                >
                   {supportedLanguages.map((lang) => (
                     <option key={lang.code} value={lang.code}>
                       {lang.label}
                     </option>
                   ))}
                 </select>
-                <button type="button" className="btn-submit" onClick={onLanguageSelected}>
+                <button
+                  type="button"
+                  className="btn-submit"
+                  onClick={onLanguageSelected}
+                  aria-label="Submit Language Change"
+                >
                   Submit
                 </button>
               </div>
