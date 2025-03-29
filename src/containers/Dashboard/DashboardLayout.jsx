@@ -5,13 +5,11 @@ import {
 } from '@openedx/paragon';
 import PropTypes from 'prop-types';
 
-import React, { useEffect } from 'react';
 import { useIntl } from '@edx/frontend-platform/i18n';
-import banner from '../../assets/banner1.jpg';
+import React, { useEffect } from 'react';
 import '../../i18n';
 import WidgetSidebar from '../WidgetContainers/WidgetSidebar';
 import hooks from './hooks';
-import messages from './messages';
 
 export const columnConfig = {
   courseList: {
@@ -52,35 +50,8 @@ export const DashboardLayout = ({ children }) => {
   }, []);
 
   return (
-    <Container fluid className="font-inter">
-      {/* Header Section */}
-      <Row
-        className="banner d-flex justify-content-center align-content-center"
-        style={{ backgroundImage: `url(${banner})` }}
-      >
-        <Col {...courseListColumnProps}>
-          <div className="contain-title align-items-left">
-            <h1 className="title1">{formatMessage(messages.welcome)}</h1>
-            <h1 className="title2">{formatMessage(messages.onlineCourses)}</h1>
-            <p className="small_title">{formatMessage(messages.buildSkills)}</p>
-            {/* <Form className="search-form d-flex mt-3">
-              <FormControl
-                type="text"
-                placeholder={t('searchPlaceholder')}
-                className="search-input"
-              />
-              <Button
-                className="search-button"
-                type="button"
-                onClick={handleSearch}
-              >
-                {t('searchButton')}
-                <i className="fa fa-search" />
-              </Button>
-            </Form> */}
-          </div>
-        </Col>
-      </Row>
+    <Container fluid className="font-inter h-100">
+
 
       {/* Main Content Section */}
       <Row className="flex-column d-flex justify-content-center align-content-center">

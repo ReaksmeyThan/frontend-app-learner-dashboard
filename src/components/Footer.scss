@@ -1,68 +1,58 @@
 //============= footer========
 /* src/components/Footer.scss */
 footer {
-    flex: 0;
-    color: #ffffff;
-  
-  }
-  .footer-top {
-    background: linear-gradient(135deg, #12492A, #2BAF65);
-  
-    padding: 40px 0;
-  }
-  
-  .container-top, .container-bot {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  color: #ffffff;
+  background-color: #12492a;
+  display: flexl;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+
+  font-size: 15px;
+  .logo {
+    display: flex;
+    justify-self: center;
+    align-self: center;
+    max-width: 100px;
+    height: 34px !important;
     margin: 0 auto;
-    padding: 0 15px;
-  
-    box-sizing: border-box;
   }
-  
-  .footer-bottom {
-  
-    background-color: #374236;
-  
-    padding: 20px 0;
+}
+
+.footer-bottom {
+  height: auto !important;
+  max-width: 1600px;
+
+  margin: auto;
+  padding: 0px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-select {
+  width: 100%;
+
+  padding: 10px;
+  border-radius: 10px;
+  margin-right: 5px;
+}
+.btn-submit {
+  background-color: #12492a;
+  color: #ffffff;
+  border-radius: 10px;
+  padding: 10px;
+  margin-left: 5px;
+  border: 1px solid #f8f8f8;
+  cursor: pointer;
+
+  &:active {
+    background-color: #0e3b20;
   }
-  
-  .footer-bottom a {
-    text-decoration: none;
-    color: hsl(0, 0%, 100%);
-    &:hover{
-      color: #2BAF65;
-    }
-  }
-  
-  .footer-bottom .social-icons a {
-  
-    color: #ffffff;
-    margin-right: 10px;
-  }
-  
-  .social-icons a {
-  
-    flex-wrap: wrap;
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-    line-height: 50px;
-    border-radius: 50%;
-    background-color: none;
-    border: 1px solid green;
-    text-align: center;
-    // margin-right: 10px;
-    font-size: 24px;
-  
-    &:hover{
-      background-color: green;
-    &i{
-      vertical-align: middle;
-    }
-    }
-  }
-  .lang{
-    //height: 50px;
-    //width: 70%;
-    text-align: center;
-    padding: auto;
-  }
+}
