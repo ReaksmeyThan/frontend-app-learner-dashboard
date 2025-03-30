@@ -36,7 +36,7 @@ const MyFooter = ({ onLanguageSelected = () => {} }) => {
                   </Col>
 
                   {/* Copyright */}
-                  <Col xs={12} md={12} lg={4} className="mb-4 mb-md-0 d-flex align-items-center justify-content-center">
+                  <Col xs={12} md={12} lg={3} className="mb-4 mb-md-0 d-flex align-items-center justify-content-center">
                     <p className="small m-0">&copy; 2024 Credit Bureau Cambodia. All rights reserved.</p>
                   </Col>
 
@@ -75,7 +75,7 @@ const MyFooter = ({ onLanguageSelected = () => {} }) => {
                   </Col>
 
                   {/* Language Selector */}
-                  <Col xs={9} md={9} lg={2} className="pb-4">
+                  <Col xs={9} md={9} lg={3} className="pb-4">
                     <Footer
                       onLanguageSelected={onLanguageSelected}
                       supportedLanguages={[
