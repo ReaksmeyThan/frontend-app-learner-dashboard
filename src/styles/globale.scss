@@ -1,0 +1,11 @@
+@import './fonts';
+
+// Apply Global Font Styles
+body {
+  margin: 0;
+  font-family: $default-font; // Default global font
+}
+
+h1, h2, h3, h4, * {
+  font-family: $default-font; // Use English title font
+}
