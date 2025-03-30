@@ -24,12 +24,12 @@ const MyFooter = ({ onLanguageSelected = () => {} }) => {
   return (
     <IntlProvider locale={contextValue.config.LOCALE}>
       <AppContext.Provider value={contextValue}>
-        <div className="d-flex flex-row align-content-center justify-content-center">
+        <div className="d-flex row align-content-center justify-content-center">
           <footer className="footer-container">
             {/* Bottom Footer */}
             <div className="footer-bottom font-red-hat-display">
               <Container fluid>
-                <Row className="text-left text-white text-md-left pt-4">
+                <Row className="text-left text-white text-md-left">
                   {/* Logo */}
                   <Col xs={12} md={12} lg={2} className="pl-0 d-flex justify-content-center">
                     <img src={logoWhite} alt="Logo" className="logo" />
