@@ -16,7 +16,11 @@
   "searchButton": "ស្វែងរក",
   "course": "វគ្គសិក្សា",
   "discoverNew": "ស្វែងរកវគ្គសិក្សាថ្មី",
-  "aboutUs": "អំពី​យើង",
+  "contactUs": "អំពី​យើង",
   "browseCourses": "ស្វែងរកមេរៀន",
-  "myCourse": "វគ្គសិក្សាខ្ញុំ"
+  "myCourse": "វគ្គសិក្សាខ្ញុំ",
+  "home": "គេហទំព័រ",
+  "account": "គណនី",
+
+  "library": "បណ្ណាល័យរបស់ខ្ញុំ"
 }

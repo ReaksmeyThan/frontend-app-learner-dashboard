@@ -13,10 +13,17 @@
   "buildSkills": "Build up your skills. Explore courses here",
   "searchPlaceholder": "What do you want to learn?",
   "searchButton": "SEARCH",
+  
   "course": "Course",
    "discoverNew": "Discover New",
-   "aboutUs":"About Us",
+   "contactUs":"Content Us",
    "browseCourses":"Browse Courses",
-   "myCourse": "My Course"
+   "myCourse": "My Course",
+    "library": "Library",
+
+    "home": "Home",
+  "account": "Account"
+    
+
   
 }
