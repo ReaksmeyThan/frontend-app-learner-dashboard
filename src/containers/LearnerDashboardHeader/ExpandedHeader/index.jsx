@@ -25,25 +25,27 @@ export const ExpandedHeader = () => {
 
   return (
     <header className="d-flex shadow-sm align-items-center learner-variant-header pl-4">
-      <div className="flex-grow-1 d-flex align-items-center">
-        <BrandLogo />
-        <Button as="a" href={`${getConfig().LMS_BASE_URL}`} variant="inverse-primary" className="p-4">
-          {t('home')}
-        </Button>
-        <Button as="a" href="urls.baseAppUrl(courseSearchUrl)" variant="inverse-primary" className="p-4 course-link">
+      <div className=" header-wrapper d-flex justify-content-between align-items-center w-100">
+        <div className=" flex-grow-1 d-flex align-items-center w-100">
+          <BrandLogo />
+          <Button as="a" href={`${getConfig().LMS_BASE_URL}`} variant="inverse-primary" className="p-4">
+            {t('home')}
+          </Button>
+          <Button as="a" href="urls.baseAppUrl(courseSearchUrl)" variant="inverse-primary" className="p-4 course-link">
 
-          {t('course')}
-        </Button>
+            {t('course')}
+          </Button>
 
-        <Button as="a" href={urls.baseAppUrl(courseSearchUrl)} variant="inverse-primary" className="p-4" onClick={exploreCoursesClick}>
+          <Button as="a" href={urls.baseAppUrl(courseSearchUrl)} variant="inverse-primary" className="p-4" onClick={exploreCoursesClick}>
 
-          {t('discoverNew')}
-        </Button>
+            {t('discoverNew')}
+          </Button>
 
-        <span className="flex-grow-1" />
+          <span className="flex-grow-1" />
+        </div>
+
+        <AuthenticatedUserDropdown />
       </div>
-
-      <AuthenticatedUserDropdown />
     </header>
   );
 };
