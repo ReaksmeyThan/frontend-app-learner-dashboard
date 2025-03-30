@@ -14,14 +14,12 @@ import plower from '../assets/plower.png';
 import '../i18n';
 import './Footer.scss';
 
-
 const Footer = () => {
   const { i18n, t } = useTranslation();
 
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
   };
-
 
   useEffect(() => {
     // Ensuring language preference is consistent
