@@ -3,6 +3,7 @@ import React from 'react';
 // import { useIntl } from '@edx/frontend-platform/i18n';
 import { Button } from '@openedx/paragon';
 
+import { getConfig } from '@edx/frontend-platform';
 import urls from 'data/services/lms/urls';
 import { reduxHooks } from 'hooks';
 import { useTranslation } from 'react-i18next';
@@ -16,9 +17,7 @@ export const ExpandedHeader = () => {
   const { courseSearchUrl } = reduxHooks.usePlatformSettingsData();
   const isCollapsed = useIsCollapsed();
 
-  const exploreCoursesClick = findCoursesNavClicked(
-    urls.baseAppUrl(courseSearchUrl),
-  );
+  const exploreCoursesClick = findCoursesNavClicked(urls.baseAppUrl(courseSearchUrl));
 
   if (isCollapsed) {
     return null;
@@ -28,43 +27,20 @@ export const ExpandedHeader = () => {
     <header className="d-flex shadow-sm align-items-center learner-variant-header pl-4">
       <div className="flex-grow-1 d-flex align-items-center">
         <BrandLogo />
+        <Button as="a" href={`${getConfig().LMS_BASE_URL}`} variant="inverse-primary" className="p-4">
+          {t('home')}
+        </Button>
+        <Button as="a" href="urls.baseAppUrl(courseSearchUrl)" variant="inverse-primary" className="p-4 course-link">
 
-        <Button
-          as="a"
-          href="urls.baseAppUrl(courseSearchUrl)"
-          variant="inverse-primary"
-          className="p-4 course-link"
-        >
-          {/* {formatMessage(messages.course)} */}
           {t('course')}
         </Button>
-        {/* <Button
-          as="a"
-          href={urls.programsUrl()}
-          variant="inverse-primary"
-          className="p-4"
-        >
-          {formatMessage(messages.program)}
-        </Button> */}
-        <Button
-          as="a"
-          href={urls.baseAppUrl(courseSearchUrl)}
-          variant="inverse-primary"
-          className="p-4"
-          onClick={exploreCoursesClick}
-        >
-          {/* {formatMessage(messages.discoverNew)} */}
+
+        <Button as="a" href={urls.baseAppUrl(courseSearchUrl)} variant="inverse-primary" className="p-4" onClick={exploreCoursesClick}>
+
           {t('discoverNew')}
         </Button>
+
         <span className="flex-grow-1" />
-        {/* <Button
-          as="a"
-          href={getConfig().SUPPORT_URL}
-          variant="inverse-primary"
-          className="p-4"
-        >
-          {formatMessage(messages.help)}
-        </Button> */}
       </div>
 
       <AuthenticatedUserDropdown />

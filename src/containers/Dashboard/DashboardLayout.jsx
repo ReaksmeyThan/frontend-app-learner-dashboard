@@ -1,16 +1,11 @@
 import {
-  Button,
   Col,
   Container,
-  Form,
-  FormControl,
   Row,
 } from '@openedx/paragon';
 import PropTypes from 'prop-types';
 
 import React, { useEffect } from 'react';
-import { useTranslation } from 'react-i18next';
-import banner from '../../assets/banner1.jpg';
 import '../../i18n';
 import WidgetSidebar from '../WidgetContainers/WidgetSidebar';
 import hooks from './hooks';
@@ -38,14 +33,6 @@ export const DashboardLayout = ({ children }) => {
     ? columnConfig.courseList.withSidebar
     : columnConfig.courseList.noSidebar;
 
-  const handleSearch = () => {
-    const searchText = document.querySelector('.search-input').value;
-    alert(`Searching for: ${searchText}`);
-    // Add your search logic here
-  };
-
-  const { t } = useTranslation();
-
   useEffect(() => {
     // Ensuring language preference is consistent
     if (localStorage.getItem('i18nextLng')?.length > 2) {
@@ -55,34 +42,6 @@ export const DashboardLayout = ({ children }) => {
 
   return (
     <Container fluid className="font-inter">
-      {/* Header Section */}
-      <Row
-        className="banner d-flex justify-content-center align-content-center"
-        style={{ backgroundImage: `url(${banner})` }}
-      >
-        <Col {...courseListColumnProps}>
-          <div className="contain-title align-items-left">
-            <h1 className="title1">{t('welcome')}</h1>
-            <h1 className="title2">{t('onlineCourses')}</h1>
-            <p>{t('buildSkills')}</p>
-            <Form className="search-form d-flex mt-3">
-              <FormControl
-                type="text"
-                placeholder={t('searchPlaceholder')}
-                className="search-input"
-              />
-              <Button
-                className="search-button"
-                type="button"
-                onClick={handleSearch}
-              >
-                {t('searchButton')}
-                <i className="fa fa-search" />
-              </Button>
-            </Form>
-          </div>
-        </Col>
-      </Row>
 
       {/* Main Content Section */}
       <Row className="flex-column d-flex justify-content-center align-content-center">
