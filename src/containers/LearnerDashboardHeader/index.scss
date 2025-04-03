@@ -3,6 +3,14 @@
   position: absolute;
   left: 0;
 }
+button:focus::before{
+  border: 0px !important;
+
+}
+// .pgn__dropdown-item:hover {
+//     background-color: #d1d1d1 !important;
+    
+//   }
 
 .learner-variant-header {
   a {
