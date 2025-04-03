@@ -1,25 +1,21 @@
 import { getConfig } from '@edx/frontend-platform';
-import i18next from 'i18next';
-import PropTypes from 'prop-types';
-import React, { useState } from 'react';
-
 import { Col, Container, Row } from 'react-bootstrap';
 import { useTranslation } from 'react-i18next';
 import logoWhite from '../assets/logo-white.png';
 import './Footer.scss';
 
-const MyFooter = ({ onLanguageSelected = () => {} }) => {
+const MyFooter = () => {
   const { t } = useTranslation();
 
-  const [selectedLanguage, setSelectedLanguage] = useState('');
+  // const [selectedLanguage, setSelectedLanguage] = useState('');
 
-  const handleLanguageChange = (event) => {
-    const language = event.target.value;
-    setSelectedLanguage(language);
-    i18next.changeLanguage(language).catch((error) => {
-      console.error('Error changing language:', error);
-    });
-  };
+  // const handleLanguageChange = (event) => {
+  //   const language = event.target.value;
+  //   setSelectedLanguage(language);
+  //   i18next.changeLanguage(language).catch((error) => {
+  //     console.error('Error changing language:', error);
+  //   });
+  // };
 
   return (
     <div className="d-flex row align-content-center justify-content-center">
@@ -82,7 +78,7 @@ const MyFooter = ({ onLanguageSelected = () => {} }) => {
                   <option value="en">English</option>
                   <option value="km-kh">{t('khmer')}</option>
                 </select> */}
-                {/* <button
+              {/* <button
                   type="button"
                   className="btn btn-primary mt-3"
                   onClick={() => handleLanguageChange({ target: { value: selectedLanguage } })}
@@ -98,7 +94,7 @@ const MyFooter = ({ onLanguageSelected = () => {} }) => {
   );
 };
 MyFooter.propTypes = {
-  onLanguageSelected: PropTypes.func,
+  // onLanguageSelected: PropTypes.func,
 };
 
 export default MyFooter;
