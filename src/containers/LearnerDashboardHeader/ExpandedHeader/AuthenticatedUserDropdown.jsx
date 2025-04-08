@@ -22,7 +22,7 @@ export const AuthenticatedUserDropdown = () => {
           src={authenticatedUser.profileImage}
           id="user"
           variant="info"
-          className="profile p-4"
+          className="profile"
         >
           <span data-hj-suppress className="d-md-inline">
             {authenticatedUser.username}

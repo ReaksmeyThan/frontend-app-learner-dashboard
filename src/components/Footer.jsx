@@ -33,7 +33,30 @@ const MyFooter = () => {
               <Col xs={12} md={12} lg={3} className="mb-4 mb-md-0 d-flex align-items-center justify-content-center">
                 <p className="small m-0">&copy; 2024 Credit Bureau Cambodia. All rights reserved.</p>
               </Col>
-
+              <Col xs={9} md={9} lg={3} className="pb-4 d-flex justify-content-center">
+                {/* <ul className="list-inline m-0">
+                  <li className="list-inline-item mx-2">
+                    <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className="text-white">
+                      <i className="fa fa-facebook fa-2x" />
+                    </a>
+                  </li>
+                  <li className="list-inline-item mx-2">
+                    <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer" className="text-white">
+                      <i className="fa fa-twitter fa-2x" />
+                    </a>
+                  </li>
+                  <li className="list-inline-item mx-2">
+                    <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" className="text-white">
+                      <i className="fa fa-linkedin fa-2x" />
+                    </a>
+                  </li>
+                  <li className="list-inline-item mx-2">
+                    <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" className="text-white">
+                      <i className="fa fa-instagram fa-2x" />
+                    </a>
+                  </li>
+                </ul> */}
+              </Col>
               {/* Links */}
               <Col xs={12} md={12} lg={4} className="mb-4 mb-md-0 d-flex align-items-center justify-content-center">
                 <ul className="list-inline m-0">
@@ -63,29 +86,8 @@ const MyFooter = () => {
                 </ul>
               </Col>
 
-              {/* Language Selector */}
-              {/* <Col xs={9} md={9} lg={3} className="pb-4">
-                <label htmlFor="language-selector" className="text-white small">
-                  {t('selectLanguage')}
-                </label>
-                <select
-                  id="language-selector"
-                  className="form-select mt-3"
-                  value={selectedLanguage}
-                  onChange={setSelectedLanguage}
-
-                >
-                  <option value="en">English</option>
-                  <option value="km-kh">{t('khmer')}</option>
-                </select> */}
-              {/* <button
-                  type="button"
-                  className="btn btn-primary mt-3"
-                  onClick={() => handleLanguageChange({ target: { value: selectedLanguage } })}
-                >
-                  Submit
-                </button> */}
-              {/* </Col> */}
+              {/* Social Media Icons */}
+     
             </Row>
           </Container>
         </div>
