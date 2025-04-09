@@ -87,7 +87,6 @@ const MyFooter = () => {
               </Col>
 
               {/* Social Media Icons */}
-     
             </Row>
           </Container>
         </div>
