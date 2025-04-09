@@ -36,7 +36,7 @@ button:focus::before{
 
     &::after {
       content: '\00BB';
-      padding-left: 10px;
+    
     }
   }
 }
