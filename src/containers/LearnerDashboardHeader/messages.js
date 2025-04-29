@@ -86,6 +86,21 @@ const messages = defineMessages({
     defaultMessage: 'New',
     description: 'The text announcing that an item in the user menu is New',
   },
+  home: {
+    id: 'header.label.home',
+    defaultMessage: 'Home',
+    description: 'The text for the user menu Home navigation link.',
+  },
+  myCourse: {
+    id: 'header.label.myCourse',
+    defaultMessage: 'My Course',
+    description: 'The text for the user menu Course navigation link.',
+  },
+  exploreCourse: {
+    id: 'header.label.exploreCourse',
+    defaultMessage: 'Explore Courses',
+    description: 'The text for the user menu Explore Courses navigation link.',
+  },
 });
 
 export default messages;
