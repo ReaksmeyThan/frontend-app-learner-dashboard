@@ -9,6 +9,7 @@ import { reduxHooks } from 'hooks';
 // import { useTranslation } from 'react-i18next';
 import BrandLogo from '../BrandLogo';
 import { findCoursesNavClicked, useIsCollapsed } from '../hooks';
+import messages from '../messages';
 import AuthenticatedUserDropdown from './AuthenticatedUserDropdown';
 
 export const ExpandedHeader = () => {
