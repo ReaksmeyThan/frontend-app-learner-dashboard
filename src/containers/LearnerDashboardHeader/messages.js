@@ -87,19 +87,19 @@ const messages = defineMessages({
     description: 'The text announcing that an item in the user menu is New',
   },
   home: {
-    id: 'header.label.home',
+    id: 'learnerVariantDashboard.home',
     defaultMessage: 'Home',
     description: 'The text for the user menu Home navigation link.',
   },
   myCourse: {
-    id: 'header.label.myCourse',
+    id: 'learnerVariantDashboard.myCourse',
     defaultMessage: 'My Course',
-    description: 'The text for the user menu Course navigation link.',
+    description: 'The text for the user menu My Course navigation link.',
   },
   exploreCourse: {
-    id: 'header.label.exploreCourse',
-    defaultMessage: 'Explore Courses',
-    description: 'The text for the user menu Explore Courses navigation link.',
+    id: 'learnerVariantDashboard.exploreCourse',
+    defaultMessage: 'Explore Course',
+    description: 'The text for the user menu Explore Course navigation link.',
   },
 });
 
