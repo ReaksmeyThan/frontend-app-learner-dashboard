@@ -90,7 +90,7 @@ export const App = () => {
             )}
           </main>
         </AppWrapper>
-        <MyFooter onLanguageSelected={(language) => { i18next.changeLanguage(language); }} />
+        <MyFooter />
         <ZendeskFab />
       </div>
     </>
