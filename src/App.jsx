@@ -24,7 +24,7 @@ import AppWrapper from 'containers/WidgetContainers/AppWrapper';
 
 import { getConfig } from '@edx/frontend-platform';
 import MyFooter from 'components/Footer'; // Adjust the path if necessary
-import i18next from 'i18next';
+
 import './App.scss';
 import messages from './messages';
 

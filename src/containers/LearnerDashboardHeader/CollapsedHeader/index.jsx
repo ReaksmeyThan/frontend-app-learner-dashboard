@@ -1,13 +1,13 @@
 import React from 'react';
 
 import { useIntl } from '@edx/frontend-platform/i18n';
-import { MenuIcon, Close } from '@openedx/paragon/icons';
-import { IconButton, Icon } from '@openedx/paragon';
+import { Icon, IconButton } from '@openedx/paragon';
+import { Close, MenuIcon } from '@openedx/paragon/icons';
 
-import { useLearnerDashboardHeaderData, useIsCollapsed } from '../hooks';
+import { useIsCollapsed, useLearnerDashboardHeaderData } from '../hooks';
 
-import CollapseMenuBody from './CollapseMenuBody';
 import BrandLogo from '../BrandLogo';
+import CollapseMenuBody from './CollapseMenuBody';
 
 import messages from '../messages';
 
