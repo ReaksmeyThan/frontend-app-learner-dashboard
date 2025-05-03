@@ -24,7 +24,7 @@ const messages = defineMessages({
   allRightsReserved: {
     id: 'learnerVariantDashboard.allRightsReserved',
     description: 'All rights reserved message in footer',
-    defaultMessage: '&copy; 2025 Credit Bureau Cambodia. All rights reserved.',
+    defaultMessage: '© 2025 Credit Bureau Cambodia. All rights reserved.',
   },
 });
 
