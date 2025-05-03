@@ -97,7 +97,7 @@ const messages = defineMessages({
     description: 'The text for the user menu My Course navigation link.',
   },
   exploreCourse: {
-    id: 'earnerVariantDashboard.exploreCourse',
+    id: 'learnerVariantDashboard.exploreCourse',
     defaultMessage: 'Explore Course',
     description: 'The text for the user menu Explore Course navigation link.',
   },
