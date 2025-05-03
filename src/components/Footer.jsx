@@ -3,6 +3,7 @@ import { useIntl } from '@edx/frontend-platform/i18n';
 import { Col, Container, Row } from 'react-bootstrap';
 import logoWhite from '../assets/logo-white.png';
 import './Footer.scss';
+import messages from './messages';
 
 const MyFooter = () => {
   const { formatMessage } = useIntl();
@@ -20,7 +21,7 @@ const MyFooter = () => {
 
               {/* Copyright */}
               <Col xs={12} md={12} lg={3} className="mb-4 mb-md-0 d-flex align-items-center justify-content-center">
-                <p className="small m-0">&copy; 2024 Credit Bureau Cambodia. All rights reserved.</p>
+                <p className="small m-0">{formatMessage(messages.allRightsReserved)}</p>
               </Col>
               <Col xs={9} md={9} lg={3} className="pb-4 d-flex justify-content-center">
                 {/* Social Media Icons (commented out) */}
@@ -30,28 +31,28 @@ const MyFooter = () => {
                 <ul className="list-inline m-0">
                   <li className="list-inline-item mx-2">
                     <a href={getConfig().LMS_BASE_URL} className="text-white small">
-                      {formatMessage({ id: 'myCourse', defaultMessage: 'My Course' })}
+                      {formatMessage(messages.myCourse)}
                     </a>
                   </li>
                   |
                   <li className="list-inline-item mx-2">
                     <a href={`${getConfig().LMS_BASE_URL}/library`} className="text-white small">
 
-                      {formatMessage({ id: 'library', defaultMessage: 'Library' })}
+                      {formatMessage(messages.library)}
                     </a>
                   </li>
                   |
                   <li className="list-inline-item mx-2">
                     <a href={`${getConfig().LMS_BASE_URL}/contact`} className="text-white small">
 
-                      {formatMessage({ id: 'contactUs', defaultMessage: 'Contact Us' })}
+                      {formatMessage(messages.contactUs)}
                     </a>
                   </li>
                   |
                   <li className="list-inline-item mx-2">
                     <a href={getConfig().ACCOUNT_SETTINGS_URL} className="text-white small">
 
-                      {formatMessage({ id: 'home', defaultMessage: 'Account' })}
+                      {formatMessage(messages.account)}
                     </a>
                   </li>
                 </ul>
